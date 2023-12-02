@@ -16,14 +16,14 @@ https://www.kaggle.com/code/pankajkumar2002/361-380-tr-epochs-git-fingerspelling
 There is high probability of getting Runtime error with tflite-runtime. This error would be reason on Registerting tensorflow_runtime twice by tflite and medipape. 
 Inorder to prevent the Runtime Error Make the following changes.
 
-Go to $HOME/pythonvenv/python310/lib/python3.10/site-packages/tensorflow/lite/python/interpreter.py
+Go to '$HOME/pythonvenv/python310/lib/python3.10/site-packages/tensorflow/lite/python/interpreter.py'
 
-### $HOME is your user directory
+$HOME is your user directory
 
 Comment out 'from tensorflow.lite.python.interpreter_wrapper import _pywrap_tensorflow_interpreter_wrapper as _interpreter_wrapper'
 
 It will prevent twice Registration of Interpreter wrapper.
 
-##Note
+## Note
 
 Making this change will lead to Runtime Error on the standalone use of TfliteRuntime, So you need to Uncomment the above commented line.
