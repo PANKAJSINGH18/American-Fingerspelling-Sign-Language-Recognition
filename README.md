@@ -7,14 +7,18 @@
 3. run the finger.py file in order to run the Project
 
 
-## Model is being trained over the kaggle and below is the refence of the Notebook
+## Model Reference
 
 https://www.kaggle.com/code/pankajkumar2002/361-380-tr-epochs-git-fingerspelling
 
+## About Model Building
+
+The model is being trained over the kaggle. It took 8 days of training with GPUP100 using the Pytorch checkpoints. The Model Architecture is based upon Transformer for which the encoder part is taken as a squeezeormer and for the decoder standard decoder with 2 layers is used.
+
 ## Note
 
-There is high probability of getting Runtime error with tflite-runtime. This error would be reason on Registerting tensorflow_runtime twice by tflite and medipape. 
-Inorder to prevent the Runtime Error Make the following changes.
+There is a high probability of getting a Runtime error with tflite-runtime. This error would be the reason for Registering tensorflow_runtime twice by tflite and medipape. 
+In order to prevent the Runtime Error Make the following changes.
 
 Go to '$HOME/pythonvenv/python310/lib/python3.10/site-packages/tensorflow/lite/python/interpreter.py'
 
@@ -26,4 +30,4 @@ It will prevent twice Registration of Interpreter wrapper.
 
 ## Note
 
-Making this change will lead to Runtime Error on the standalone use of TfliteRuntime, So you need to Uncomment the above commented line.
+Making this change will lead to a Runtime Error on the standalone use of TfliteRuntime, So you need to Uncomment the above-commented line.
