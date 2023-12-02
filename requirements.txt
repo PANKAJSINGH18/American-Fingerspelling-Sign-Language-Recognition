@@ -1,0 +1,8 @@
+pytorch
+tensorflow
+mediapipe
+pandas
+numpy
+tflite_runtime
+json
+opencv-python
